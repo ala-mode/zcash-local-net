@@ -12,12 +12,13 @@
 //! # List of Managed Processes
 //! - Zebrad
 //! - Zcashd
+//! - Zcash-cli
 //! - Zainod
 //! - Lightwalletd
 //!
 //! # Prerequisites
 //!
-//! An internet connection will be needed (during the fist build at least) in order to fetch the required testing binaries.
+//! An internet connection will be needed to build and fetch the required testing binaries.
 //! The binaries will be automagically checked and downloaded on `cargo build/check/test`. If you specify `None` in a process `launch` config, these binaries will be used.
 //! The path to the binaries can be specified when launching a process. In that case, you are responsible for compiling the needed binaries.
 //! Each processes `launch` fn and [`crate::LocalNet::launch`] take config structs for defining parameters such as path
@@ -30,10 +31,8 @@
 //!
 //! # Testing
 //!
+//! The `test_fixtures` feature is enabled by default.
 //! See [`crate::test_fixtures`] doc comments for running client rpc tests from external crates for indexer/validator development.
-//!
-//! The `test_fixtures` feature is enabled by default to allow tests to run.
-//!
 
 use indexer::{
     Empty, EmptyConfig, Indexer, Lightwalletd, LightwalletdConfig, Zainod, ZainodConfig,
