@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cargo readme > README.md
+cargo readme --help && cargo readme > README.md
